@@ -1,0 +1,145 @@
+@media (max-width: 1300px) { 
+.textos {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row; /* 👉 lado a lado */
+    justify-content: space-between; 
+    align-items: center;
+    font-family: "Inter", sans-serif;
+    font-size: 0.9vw;
+    font-style: bold;
+    font-weight: 600;
+}
+
+.selecao_item {
+    /* background-color: aquamarine; */
+    border: 2px solid black;
+    border-radius: 16px;
+    width: 100%;
+    height: 60%;
+      
+  
+    
+}
+
+.caixa-hard {
+    width: 100%;
+    height: auto;
+    /* background-color: chartreuse; */
+    margin-bottom: 3%;
+}
+
+.caixa-hard  h2 {
+    font-family: "Inter", sans-serif;
+    font-size: 1.7vw;
+    font-style: bold;
+    font-weight: 500;
+    margin-top: 1.5%;
+    margin-left: 3%;
+}
+
+.ferramentas {
+    width: 94%;
+    /* background-color: brown; */
+    margin-left: 3%;
+    margin-top: 1.5%;
+    display: flex;           /* coloca os itens lado a lado */
+    flex-wrap: wrap;         /* quebra a linha quando não couber mais */
+    justify-content: space-between;   
+    
+
+}
+
+.ferramentas div {
+    display: flex;
+    width: 45vw;
+    /* background-color: rgb(255, 0, 255); */
+    margin-bottom: 1.5%;
+}
+
+.ferramentas div img {
+    width: 8vw;
+    height: 8vw;
+    border-radius: 20px;
+}
+
+.info-ferramentas {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2vw;
+    height: auto;
+    width: 30vw;
+    /* background-color: aqua; */
+    font-family: "Inter", sans-serif;
+}
+
+.info-ferramentas  ul li {
+    margin-left: 3.5%;
+    /* margin-top: 1%; */
+
+}
+
+.caixa-cert {
+    width: 100%;
+    height: auto;
+    /* background-color: chartreuse; */
+    /* margin-bottom: 3%; */
+}
+
+.caixa-cert  h2 {
+    font-family: "Inter", sans-serif;
+    font-size: 1.7vw;
+    font-style: bold;
+    font-weight: 500;
+    margin-top: 1.5%;
+    margin-left: 3%;
+}
+
+.badges {
+    width: 94%;
+    /* background-color: brown; */
+    margin-left: 3%;
+    margin-top: 1.5%;
+    display: flex;           /* coloca os itens lado a lado */
+    flex-wrap: wrap;         /* quebra a linha quando não couber mais */
+    justify-content: space-between;   
+    position: relative;
+}
+
+
+
+.badges div img {
+    width: 15vw;
+    border-radius: 20px;
+}
+
+.badges div img:hover {
+    cursor: pointer;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px #FF6200;
+}
+
+.info-2 {
+  width: 27rem;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.814);
+  color: #FFFFFF;
+  font-family: "Inter", sans-serif;
+  font-size: 0.8rem;
+  z-index: 2;
+  position: absolute;
+  /* margin-left: 20%; */
+  margin-top: 1.5%;
+  opacity: 0;
+  transition: 0.7s;
+  pointer-events: none; /* <--- impede interação enquanto invisível */
+}
+
+.info-2 ul li {
+    margin-left: 4.6%;
+
+}
+
+}
