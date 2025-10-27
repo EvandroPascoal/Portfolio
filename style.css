@@ -465,6 +465,23 @@ h1 {
   overflow: hidden;
 }
 
+.botao-teams {
+    display: inline-block;
+    background-color: #464EB8; /* Cor do Teams */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-weight: 600;
+    transition: background 0.3s ease;
+    margin-top: 1vw;
+}
+
+  .botao-teams:hover {
+    background-color: #ff6201; /* tom mais escuro no hover */
+  }
+
 /* Estado inicial (presente fechado) */
 .presente-fechado {
   font-size: 6rem;
