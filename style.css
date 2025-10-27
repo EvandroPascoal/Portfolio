@@ -146,8 +146,7 @@ h1 {
 }
 
 .texto_hover_pro {
-    height: 100%;  
-    width: 25%;  
+    height: 100%;   
     display: flex;
     align-items: center;
     justify-content: center;
@@ -155,6 +154,7 @@ h1 {
     /* padding-left: 5%;
     padding-right: 5%; */
     transition: all 0.5s ease; 
+    width: 25%; 
 }
 
 .texto_hover_pro:hover{
@@ -164,7 +164,6 @@ h1 {
 
 .texto_hover_hard {
     height: 100%;   
-    width: 25%; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -172,6 +171,7 @@ h1 {
     /* padding-left: 5%;
     padding-right: 5%; */
     transition: all 0.5s ease; 
+     width: 25%; 
 }
 
 .texto_hover_hard:hover{
@@ -181,7 +181,6 @@ h1 {
 
 .texto_hover_cert {
     height: 100%;   
-    width: 25%; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -191,6 +190,7 @@ h1 {
     /* padding-left: 5%;
     padding-right: 5%; */
     transition: all 0.5s ease; 
+    width: 25%; 
 }
 
 .texto_hover_cert:hover{
@@ -427,6 +427,8 @@ h1 {
 
 .ferramentas div img {
     width: 10vw;
+    height: 10vw;
+
     border-radius: 20px;
 }
 
@@ -651,28 +653,27 @@ h1 {
 }
 
 .texto_hover_ex {
- 
+    /* background-color: aqua; */
     border-bottom-left-radius:14px;
     border-top-left-radius:14px;
+    width: 25%;
+
+}
+.texto_hover_pro {
+
+    width: 25%;
 
 }
 
-
-
 .texto_hover_hard {
-    height: 100%;   
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 0;
-    padding-left: 5%;
-    padding-right: 5%;
-    transition: all 0.5s ease; 
+
+    width: 25%;
+
 }
 
 
 .texto_hover_cert {
-
+    width: 25%;
     border-bottom-right-radius:14px;
     border-top-right-radius:14px;
   

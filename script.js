@@ -177,3 +177,19 @@ window.addEventListener('resize', () => {
   atualizarDestaque();
   ativarHoverBadges();
 });
+
+// ----------------------
+
+const style2 = document.querySelector('link[href="style_2.css"]');
+
+function checarTamanhoTela() {
+  if (window.matchMedia("(max-width: 768px)").matches) {
+    style2.disabled = true;  // Desativa o CSS
+  } else {
+    style2.disabled = false; // Reativa quando voltar pro desktop
+  }
+}
+
+// Executa ao carregar e quando redimensionar
+checarTamanhoTela();
+window.addEventListener("resize", checarTamanhoTela);
