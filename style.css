@@ -489,6 +489,7 @@ h1 {
   text-align: center;
   transition: transform 0.6s ease, opacity 0.4s ease;
   animation: flutuar 2s ease-in-out infinite;
+  margin-top: 10%;
 }
 
 .presente-fechado p {
