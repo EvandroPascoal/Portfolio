@@ -88,6 +88,40 @@ h1 {
   
 }
 
+.meus-links {
+    position: absolute;  
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    left: 43%; 
+    margin-top: 10px;
+}
+
+.meus-links a {
+    padding: 8px;
+    /* height: 30px; */
+    /* background-color: #FF6200; */
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-style: bold;
+    font-weight: 500;
+    color: inherit;         /* usa a cor do texto do elemento pai */
+    text-decoration: none; 
+    border: 2px solid #000000 ;
+    transition: 0.5s;
+    
+}
+
+.meus-links a:hover {
+    background-color: #FF6200;
+    color: #FFFF;
+    cursor: pointer;
+}
+
 .selecao {
     position: absolute;
     width: 40%;
@@ -1025,6 +1059,34 @@ h1 {
   font-family: 'Inter', sans-serif;
   position: relative;
   overflow: hidden;
+}
+
+.meus-links {
+    position: absolute;  
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    left: 73%; 
+    margin-top: 2.4vw;
+}
+
+.meus-links a {
+    padding: 6px;
+    /* height: 30px; */
+    /* background-color: #FF6200; */
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-style: bold;
+    font-weight: 500;
+    color: inherit;         /* usa a cor do texto do elemento pai */
+    text-decoration: none; 
+    border: 2px solid #000000 ;
+    transition: 0.5s;
+    
 }
 
 

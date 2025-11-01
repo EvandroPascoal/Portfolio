@@ -127,7 +127,7 @@
   background-color: rgba(0, 0, 0, 0.814);
   color: #FFFFFF;
   font-family: "Inter", sans-serif;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   z-index: 2;
   position: absolute;
   /* margin-left: 20%; */
@@ -140,6 +140,35 @@
 .info-2 ul li {
     margin-left: 4.6%;
 
+}
+
+
+.meus-links {
+    position: absolute;  
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    left: 43%; 
+    margin-top: 7px;
+}
+
+.meus-links a {
+    padding: 6px;
+    /* height: 30px; */
+    /* background-color: #FF6200; */
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-style: bold;
+    font-weight: 500;
+    color: inherit;         /* usa a cor do texto do elemento pai */
+    text-decoration: none; 
+    border: 2px solid #000000 ;
+    transition: 0.5s;
+    
 }
 
 }
