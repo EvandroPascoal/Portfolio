@@ -1,88 +1,179 @@
-const badgesInfo = {
-  analytics: {
-    titulo: "Associate - Analytics Engineering",
-    emitido: "Itaú Unibanco",
-    descricao: `A pessoa que detém este Badge possui conhecimentos sobre aplicação da Engenharia de Analytics no Itaú, e conhecimentos sobre as principais ferramentas de mercado e serviços da AWS utilizados no banco, demonstrando habilidades para resolver problemas e finalizar tarefas com escopo claro e definido.`,
-    habilidades: ["Database Analysis", "Data Mining", "Data View"],
-    criterios: `Concluir todos os testes intermediários, com nota igual ou superior a 70% em cada um dos módulos do programa Associate - Engenharia de Analytics.`
-  },
-  engineering: {
-    titulo: "Associate - Data Engineering",
-    emitido: "Itaú Unibanco",
-    descricao: "A pessoa que detém este badge, possui conhecimentos sobre aplicação da Engenharia de Dados no Itaú, e conhecimentos sobre as principais ferramentas de mercado e serviços da AWS utilizados no banco, demonstrando habilidades para resolver problemas e finalizar tarefas com escopo claro e definido.",
-    habilidades: ["Database Administration", "Data Mining", "ETL"],
-    criterios: "Concluir todos os testes intermediários, com nota igual ou superior a 70% em cada um dos módulos do programa Associate - Engenharia de Dados."
-  },
-  generative: {
-    titulo: "Practitioner - Generative AI",
-    emitido: "Itaú Unibanco",
-    descricao: "A pessoa que detém este Badge adquiriu os conceitos fundamentais sobre Inteligência Artificial Generativa, tanto no aspecto teórico quanto no prático. É capaz de entender os alicerces básicos da mecânica que sustenta as principais ferramentas de Inteligência Artificial Generativa, bem como compreender os seus potenciais casos de uso no âmbito social.",
-    habilidades: ["Artificial Intelligence (AI)", "Machine Learning Algorithms", "Machine Learning (ML)"],
-    criterios: "Acessar todas as trilhas Practitioner - IA Generativa, explorar os conteúdos e concluí-las."
-  },
-  business: {
-    titulo: "Practitioner - Business Analytics",
-    emitido: "Itaú Unibanco",
-    descricao: "A pessoa que detém este Badge, possui conhecimentos básicos sobre programação para analise de dados, analise estatística, comunicação com dados, ferramentas para analise de dados no Itaú e experimentação nos negócios, entendendo melhor os conceitos do que é ser data-driven na pratica.",
-    habilidades: ["Analise Exploratória de Dados", "Analytics Tools", "Data Driven Instruction"],
-    criterios: "Acessar todas as trilhas do plano Practitioner - Business Analytics, explorar os conteúdos e concluí-las."
-  },
-  foundation: {
-    titulo: "Practitioner - D&A Foundation",
-    emitido: "Itaú Unibanco",
-    descricao: "A pessoa que detém esta Badge possui conhecimentos básicos sobre disciplinas relacionadas a dados, tendo sido introduzida aos conceitos e termos correntes em áreas como: Modelagem de Dados, Engenharia de Dados e Analytics, Ciência de Dados, Engenharia de Machine Learning e Governança de Dados. Sendo, portanto, letrada em dados, tendo intuição sobre o ciclo do dado, desde sua aquisição e tratamento até análises avançadas, entrega contínua e geração de valor.",
-    habilidades: ["Analise Exploratória de Dados", "Analytical Skills", "Data Driven Instruction"],
-    criterios: "Acesse todas as trilhas do plano Practitioner - Fundação de Dados, explorar os conteúdos e concluí-las."
-  }
-};
+// const badgesInfo = {
+//   analytics: {
+//     titulo: "Associate - Analytics Engineering",
+//     emitido: "Itaú Unibanco",
+//     descricao: `A pessoa que detém este Badge possui conhecimentos sobre aplicação da Engenharia de Analytics no Itaú, e conhecimentos sobre as principais ferramentas de mercado e serviços da AWS utilizados no banco, demonstrando habilidades para resolver problemas e finalizar tarefas com escopo claro e definido.`,
+//     habilidades: ["Database Analysis", "Data Mining", "Data View"],
+//     criterios: `Concluir todos os testes intermediários, com nota igual ou superior a 70% em cada um dos módulos do programa Associate - Engenharia de Analytics.`
+//   },
+//   engineering: {
+//     titulo: "Associate - Data Engineering",
+//     emitido: "Itaú Unibanco",
+//     descricao: "A pessoa que detém este badge, possui conhecimentos sobre aplicação da Engenharia de Dados no Itaú, e conhecimentos sobre as principais ferramentas de mercado e serviços da AWS utilizados no banco, demonstrando habilidades para resolver problemas e finalizar tarefas com escopo claro e definido.",
+//     habilidades: ["Database Administration", "Data Mining", "ETL"],
+//     criterios: "Concluir todos os testes intermediários, com nota igual ou superior a 70% em cada um dos módulos do programa Associate - Engenharia de Dados."
+//   },
+//   generative: {
+//     titulo: "Practitioner - Generative AI",
+//     emitido: "Itaú Unibanco",
+//     descricao: "A pessoa que detém este Badge adquiriu os conceitos fundamentais sobre Inteligência Artificial Generativa, tanto no aspecto teórico quanto no prático. É capaz de entender os alicerces básicos da mecânica que sustenta as principais ferramentas de Inteligência Artificial Generativa, bem como compreender os seus potenciais casos de uso no âmbito social.",
+//     habilidades: ["Artificial Intelligence (AI)", "Machine Learning Algorithms", "Machine Learning (ML)"],
+//     criterios: "Acessar todas as trilhas Practitioner - IA Generativa, explorar os conteúdos e concluí-las."
+//   },
+//   business: {
+//     titulo: "Practitioner - Business Analytics",
+//     emitido: "Itaú Unibanco",
+//     descricao: "A pessoa que detém este Badge, possui conhecimentos básicos sobre programação para analise de dados, analise estatística, comunicação com dados, ferramentas para analise de dados no Itaú e experimentação nos negócios, entendendo melhor os conceitos do que é ser data-driven na pratica.",
+//     habilidades: ["Analise Exploratória de Dados", "Analytics Tools", "Data Driven Instruction"],
+//     criterios: "Acessar todas as trilhas do plano Practitioner - Business Analytics, explorar os conteúdos e concluí-las."
+//   },
+//   foundation: {
+//     titulo: "Practitioner - D&A Foundation",
+//     emitido: "Itaú Unibanco",
+//     descricao: "A pessoa que detém esta Badge possui conhecimentos básicos sobre disciplinas relacionadas a dados, tendo sido introduzida aos conceitos e termos correntes em áreas como: Modelagem de Dados, Engenharia de Dados e Analytics, Ciência de Dados, Engenharia de Machine Learning e Governança de Dados. Sendo, portanto, letrada em dados, tendo intuição sobre o ciclo do dado, desde sua aquisição e tratamento até análises avançadas, entrega contínua e geração de valor.",
+//     habilidades: ["Analise Exploratória de Dados", "Analytical Skills", "Data Driven Instruction"],
+//     criterios: "Acesse todas as trilhas do plano Practitioner - Fundação de Dados, explorar os conteúdos e concluí-las."
+//   }
+// };
 
-const positions = {
-  analytics: "20%",
-  engineering: "40%",
-  generative: "60%",
-  business: "20%",
-  foundation: "40%"
-};
+// const positions = {
+//   analytics: "20%",
+//   engineering: "40%",
+//   generative: "60%",
+//   business: "20%",
+//   foundation: "40%"
+// };
 
-const infoDiv = document.querySelector(".info-2");
-const badgeElements = document.querySelectorAll(".badges > div");
+// const infoDiv = document.querySelector(".info-2");
+// const badgeElements = document.querySelectorAll(".badges > div");
 
-// Função para ativar/desativar hover conforme tamanho da tela
-function ativarHoverBadges() {
-  if (window.matchMedia("(max-width: 768px)").matches) {
-    // Remove eventos de hover em telas pequenas
-    badgeElements.forEach(badge => {
-      badge.replaceWith(badge.cloneNode(true));
-    });
-  } else {
-    // Ativa hover normalmente em telas grandes
-    badgeElements.forEach(badge => {
-      badge.addEventListener("mouseenter", () => {
-        const key = badge.classList[0];
-        const data = badgesInfo[key];
-        if (data) {
-          infoDiv.innerHTML = `
-            <h3>${data.titulo}</h3>
-            <p><strong>Emitido por:</strong> ${data.emitido}</p>
-            <p>${data.descricao}</p>
-            <h4>Habilidades</h4>
-            <ul>${data.habilidades.map(h => `<li>${h}</li>`).join("")}</ul>
-            <h4>Critérios de recebimento</h4>
-            <p>${data.criterios}</p>
-          `;
-          infoDiv.style.marginLeft = positions[key];
-          infoDiv.classList.add("show");
-        }
-      });
+// // Função para ativar/desativar hover conforme tamanho da tela
+// function ativarHoverBadges() {
+//   if (window.matchMedia("(max-width: 768px)").matches) {
+//     // Remove eventos de hover em telas pequenas
+//     badgeElements.forEach(badge => {
+//       badge.replaceWith(badge.cloneNode(true));
+//     });
+//   } else {
+//     // Ativa hover normalmente em telas grandes
+//     badgeElements.forEach(badge => {
+//       badge.addEventListener("mouseenter", () => {
+//         const key = badge.classList[0];
+//         const data = badgesInfo[key];
+//         if (data) {
+//           infoDiv.innerHTML = `
+//             <h3>${data.titulo}</h3>
+//             <p><strong>Emitido por:</strong> ${data.emitido}</p>
+//             <p>${data.descricao}</p>
+//             <h4>Habilidades</h4>
+//             <ul>${data.habilidades.map(h => `<li>${h}</li>`).join("")}</ul>
+//             <h4>Critérios de recebimento</h4>
+//             <p>${data.criterios}</p>
+//           `;
+//           infoDiv.style.marginLeft = positions[key];
+//           infoDiv.classList.add("show");
+//         }
+//       });
 
-      badge.addEventListener("mouseleave", () => {
-        infoDiv.classList.remove("show");
-      });
-    });
-  }
-}
+//       badge.addEventListener("mouseleave", () => {
+//         infoDiv.classList.remove("show");
+//       });
+//     });
+//   }
+// }
 
 // ========================================================
+
+
+
+
+// Tooltip badges ======================
+
+(function () {
+  // Cria o elemento tooltip uma vez
+  const tooltip = document.createElement('div');
+  tooltip.className = 'tooltip';
+  document.body.appendChild(tooltip);
+
+  // Offsets para o tooltip (distância do cursor)
+  const OFFSET_X = 14;
+  const OFFSET_Y = 50;
+
+  // Função para limitar o tooltip dentro da viewport
+  function clampToViewport(x, y, tooltipEl) {
+    const padding = 8; // folga da borda da janela
+    const rect = tooltipEl.getBoundingClientRect();
+    const vw = window.innerWidth;
+    const vh = window.innerHeight;
+
+    let nx = x;
+    let ny = y;
+
+    // impede que extrapole à direita
+    if (x + rect.width/2 + padding > vw) nx = vw - rect.width/2 - padding;
+    // impede que extrapole à esquerda
+    if (x - rect.width/2 - padding < 0) nx = rect.width/2 + padding;
+    // impede que extrapole abaixo
+    if (y + rect.height/2 + padding > vh) ny = vh - rect.height/2 - padding;
+    // impede que extrapole acima
+    if (y - rect.height/2 - padding < 0) ny = rect.height/2 + padding;
+
+    return { x: nx, y: ny };
+  }
+
+  // Seleciona apenas os divs dentro de .badges
+  document.querySelectorAll('.badges a div').forEach(el => {
+    // salvar texto original do title (se houver) no dataset
+    const originalTitle = el.getAttribute('title');
+    if (originalTitle) el.dataset.tooltipText = originalTitle;
+
+    el.addEventListener('mouseenter', (e) => {
+      // evita que o tooltip nativo apareça
+      const t = el.getAttribute('title');
+      if (t !== null) {
+        el.dataset._savedTitle = t;
+        el.removeAttribute('title');
+      }
+
+      // mostra texto
+      const text = el.dataset.tooltipText || el.dataset._savedTitle || '';
+      if (text) {
+        tooltip.textContent = text;
+        tooltip.classList.add('visible');
+      }
+    });
+
+    el.addEventListener('mousemove', (e) => {
+      // posiciona com base no cursor (pageX/pageY considera scroll)
+      let x = e.clientX + OFFSET_X; // clientX para posição relativa à viewport
+      let y = e.clientY + OFFSET_Y;
+
+      // garante que o tooltip não ultrapasse a janela
+      const clamped = clampToViewport(x, y, tooltip);
+      tooltip.style.left = clamped.x + 'px';
+      tooltip.style.top = clamped.y + 'px';
+    });
+
+    el.addEventListener('mouseleave', () => {
+      // esconde o tooltip
+      tooltip.classList.remove('visible');
+
+      // restaura title nativo se existia
+      if (el.dataset._savedTitle) {
+        el.setAttribute('title', el.dataset._savedTitle);
+        delete el.dataset._savedTitle;
+      }
+    });
+  });
+
+  // opcional: remove tooltip ao rolar a página para evitar posicionamento incorreto
+  window.addEventListener('scroll', () => {
+    tooltip.classList.remove('visible');
+  }, { passive: true });
+
+})();
+
+// =====================================
 
 // Função para altura da navbar
 function navbarAltura() {

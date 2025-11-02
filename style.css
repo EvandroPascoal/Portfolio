@@ -370,28 +370,76 @@ h1 {
 }
 
 .badges {
-    width: 94%;
-    /* background-color: brown; */
-    margin-left: 3%;
-    margin-top: 1.5%;
-    display: flex;           /* coloca os itens lado a lado */
-    flex-wrap: wrap;         /* quebra a linha quando não couber mais */
-    justify-content: space-between;   
-    position: relative;
+  width: 94%;
+  margin-left: 3%;
+  margin-top: 1.5%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* exatamente 3 por linha */
+  gap: 170px;
+  row-gap: 20px;  
 }
 
+.badges a {
+  text-decoration: none;
+}
 
+.badges div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 15vw;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+
+}
 
 .badges div img {
-    width: 15vw;
-    border-radius: 20px;
+  width: 15vw;
+  border-radius: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .badges div img:hover {
-    cursor: pointer;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px #FF6200;
+  cursor: pointer;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px #ff6200;
 }
+
+
+
+
+
+
+/* Tooltip global (invisível por padrão) */
+.tooltip {
+  position: fixed;              /* fixa na tela para seguir o mouse */
+  pointer-events: none;         /* não atrapalha cliques */
+  background: #FF6200;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  white-space: nowrap;
+  transform: translate(-50%, -50%) scale(0.98);
+  transition: opacity 0.90s ease, transform 0.90s ease;
+  opacity: 0;
+  z-index: 1;
+  font-family: "Inter", sans-serif;
+  font-size: 10px;
+  font-style: bold;
+  font-weight: 500;
+}
+
+/* aparência quando visível (adicionada via JS) */
+.tooltip.visible {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+
+
 
 .info-2 {
   width: 37vw;
@@ -891,30 +939,6 @@ h1 {
     margin-left: 3%;
 }
 
-.badges {
-    width: 94%;
-    /* background-color: brown; */
-    margin-left: 3%;
-    margin-top: 2.5%;
-    display: flex;           /* coloca os itens lado a lado */
-    flex-wrap: wrap;         /* quebra a linha quando não couber mais */
-    justify-content: space-between;   
-    position: relative;
-}
-
-
-
-.badges div img {
-    width: 45vw;
-    border-radius: 20px;
-}
-
-.badges div img:hover {
-    cursor: pointer;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px #FF6200;
-}
-
 .info-2 {
   width: 90%;
   padding: 20px;
@@ -1087,6 +1111,43 @@ h1 {
     border: 2px solid #000000 ;
     transition: 0.5s;
     
+}
+
+
+.badges {
+  width: 94%;
+  margin-left: 3%;
+  margin-top: 1.5%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* exatamente 3 por linha */
+  column-gap: 20px;
+  row-gap: 20px;  
+  /* background-color: #464EB8; */
+}
+
+.badges a {
+  text-decoration: none;
+}
+
+.badges div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 150px;
+  /* background-color: #4eb846; controla o tamanho das imagens */
+}
+
+.badges div img {
+  width: 150px;
+  border-radius: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.badges div img:hover {
+  cursor: pointer;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px #ff6200;
 }
 
 
