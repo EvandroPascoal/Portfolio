@@ -167,9 +167,9 @@
   });
 
   // opcional: remove tooltip ao rolar a página para evitar posicionamento incorreto
-  window.addEventListener('scroll', () => {
-    tooltip.classList.remove('visible');
-  }, { passive: true });
+  // window.addEventListener('scroll', () => {
+  //   tooltip.classList.remove('visible');
+  // }, { passive: true });
 
 })();
 
